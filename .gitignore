@@ -1,0 +1,17 @@
+# Ignorar archivos compilados Java
+*.class
+
+# Ignorar archivos generados por IDEs como IntelliJ IDEA o Eclipse
+.idea/
+*.iml
+*.ipr
+*.iws
+.settings/
+
+.project
+.classpath
+
+# Ignorar archivos de dependencias y directorios generados
+target/
+
+bin/

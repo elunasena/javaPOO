@@ -10,7 +10,6 @@ public class RepasoEyS {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
-		/*
 		suma suma = new suma();
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -29,8 +28,6 @@ public class RepasoEyS {
 	
 		suma.saludo();
 
-
-		 */
 
 		int i=1, v1 = 1; int v2 = 45; int random=0;
 		System.out.printf("\n");

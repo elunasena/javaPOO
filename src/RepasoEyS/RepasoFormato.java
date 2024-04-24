@@ -9,7 +9,7 @@ public class RepasoFormato {
 		
 		((Object)c1).getClass().getName();
 		
-		System.out.println(c1+a + " " + ((Object)(c1+a)).getClass().getName());
+		System.out.println(c1+a + " " + ((Object)((float)(4.25*(c1+a)))).getClass().getName());
 		
 	}
 	

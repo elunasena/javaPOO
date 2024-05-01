@@ -24,6 +24,8 @@ public class Array1DAjustePorValor {
         
         modificarElemento(arreglo[3]); // intento por modificar arreglo[3]
         System.out.printf("arreglo[3] despues de modificarElemento: %d\n", arreglo[3]);
+
+
 	}
 	
     // multiplica cada elemento de un arreglo por 2

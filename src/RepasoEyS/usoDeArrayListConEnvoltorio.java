@@ -12,8 +12,7 @@ public class usoDeArrayListConEnvoltorio
 	{
 
 		BufferedReader t = new BufferedReader(new InputStreamReader(System.in));
-		ArrayList<Integer> array = new ArrayList<>();
-
+		ArrayList<Integer> array = new ArrayList<>(1);
 		System.out.printf("¿Desea añadir un valor al array? (1. Sí, 2. No.):\t");
 		int n = Integer.parseInt(t.readLine());
 		boolean bandera;
@@ -34,7 +33,9 @@ public class usoDeArrayListConEnvoltorio
 			System.out.printf("\narray[%d]: %d.", i, array.get(i));
 		}
 
+		System.out.println("\nTamaño del Array: " + array.size());
+
 	}
-	
-	
+
+
 }

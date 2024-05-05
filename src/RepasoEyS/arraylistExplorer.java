@@ -1,7 +1,5 @@
 package RepasoEyS;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,32 +31,38 @@ public class arraylistExplorer {
                     n = Integer.parseInt(t.readLine());
                     containsValue(array, n);
                     break;
-                case 4:
+                case 4: //se debe realizar manejo de excepciones cuando se vea el tema
+                    getValuesArray(array);
                     System.out.print("Ingrese el indice del elemento de la lista que desea cambiar: ");
                     int index = Integer.parseInt(t.readLine());
                     System.out.print("Ingrese el valor del indice que desea cambiar: ");
                     n = Integer.parseInt(t.readLine());
                     replaceValue(array, index, n);
+                    getValuesArray(array);
                     break;
-                case 5:
+                case 5: //se debe realizar manejo de excepciones cuando se vea el tema
+                    getValuesArray(array);
+                    System.out.print("Ingrese el índice del elemento que desea remover de la lista: ");
+                    n = Integer.parseInt(t.readLine());
+                    removeElement(array, n);
+                    getValuesArray(array);
                     break;
                 case 6:
+                    removeAll(array);
                     break;
                 case 7:
-                    break;
-                case 8: bandera = false;
+                    bandera = false;
+                    System.out.print("VALORES FINALES DE LA LISTA: \n");
+                    getValuesArray(array);
                     break;
                 default:
-                    System.out.print("\n¡Valor no válido!\nIngrese un valor que se especifique en el menú. ");
+                    System.out.print("¡Valor no válido!\nIngrese uno de los valores indicados en el menú.\n");
                     bandera = true;
 
             }
 
 
         } while (bandera);
-
-
-
 
     }
 
@@ -70,8 +74,8 @@ public class arraylistExplorer {
         System.out.print("\n3.\tConsultar sí existe un  elemento en la lista.");
         System.out.print("\n4.\tReemplazar un elemento de la lista.");
         System.out.print("\n5.\tRemover un elemento de la lista.");
-        System.out.print("\n7.\tRemover todos los elementos de la lista.");
-        System.out.print("\n8.\tPara salir.\n");
+        System.out.print("\n6.\tRemover todos los elementos de la lista.");
+        System.out.print("\n7.\tPara salir.\n");
         System.out.print("********************************\nIngrese opción: ");
 
     }
@@ -84,7 +88,7 @@ public class arraylistExplorer {
     public static void getValuesArray(ArrayList<Integer> array)
     {
         System.out.printf("Tamaño de la lista: %d\n",array.size());
-        System.out.printf("Valores de la lista:\n");
+        System.out.print("Valores de la lista:\n");
         for (int i = 0; i < array.size(); i++)
         {
             System.out.printf("array[%d]:\t%d\n", i, array.get(i));
@@ -94,7 +98,7 @@ public class arraylistExplorer {
     public static void containsValue(ArrayList<Integer> array, int num)
     {
         boolean value = array.contains(num);
-        String result = (value==true) ? "Valor encontrado en el indice: " + array.indexOf(num) : "No se encuentra el valor en la lista.\n";
+        String result = (value) ? "Valor encontrado en el indice: " + array.indexOf(num) + "\n" : "No se encuentra el valor en la lista.\n";
         System.out.print(result);
     }
 
@@ -106,5 +110,22 @@ public class arraylistExplorer {
         getValuesArray(array);
     }
 
+    public static void removeElement (ArrayList<Integer> array, int n)
+    {
+        array.remove(n);
+    }
 
+    public static void removeAll (ArrayList<Integer> array)
+    {
+        if (array.size() > 0 ) {
+            while (array.size() > 0)
+            {
+                array.remove(array.size() - 1);
+            }
+        } else
+        {
+            System.out.print("¡La lista se encuentra vacia!\n");
+        }
+        getValuesArray(array);
+    }
 }

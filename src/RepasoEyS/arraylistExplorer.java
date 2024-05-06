@@ -61,7 +61,6 @@ public class arraylistExplorer {
 
             }
 
-
         } while (bandera);
 
     }
@@ -93,6 +92,11 @@ public class arraylistExplorer {
         {
             System.out.printf("array[%d]:\t%d\n", i, array.get(i));
         }
+        /*Obteniendo los datos del arreglo con el bucle for each
+        System.out.print("valores del arreglo:\n");
+        for (Integer i : array){
+            System.out.printf("%d\n", i);
+        }*/
     }
 
     public static void containsValue(ArrayList<Integer> array, int num)

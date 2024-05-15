@@ -6,6 +6,7 @@ import com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
@@ -44,6 +45,10 @@ public class PrincipalConListas {
         Collections.sort(listaDeArtistas);
         System.out.println(listaDeArtistas);
 
+        Collections.sort(lista);
+        System.out.println(lista);
         //ordenando lista 4:30 Alura
+        lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento));
+        System.out.println(lista);
     }
 }

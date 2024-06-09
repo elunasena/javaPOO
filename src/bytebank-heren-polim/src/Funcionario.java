@@ -5,7 +5,7 @@ public class Funcionario {
     private double salario;
 
     public Funcionario(){
-
+        System.out.println("Se ingresa al constructor Funcionario");
     }
 
     public String getNombre() {
@@ -33,6 +33,7 @@ public class Funcionario {
     }
 
     public double getBonificacion(){
-        return this.salario;
+        double factor = 0.10;
+        return this.salario*factor;
     }
 }

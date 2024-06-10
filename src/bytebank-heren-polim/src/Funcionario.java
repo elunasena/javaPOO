@@ -33,7 +33,7 @@ public class Funcionario {
     }
 
     public double getBonificacion(){
-        double factor = 0.10;
+        double factor = 0.05;
         return this.salario*factor;
     }
 }

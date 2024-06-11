@@ -1,4 +1,4 @@
-public class Funcionario {
+public abstract class Funcionario {
 
     private String nombre;
     private String documento;
@@ -32,8 +32,7 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public double getBonificacion(){
-        double factor = 0.05;
-        return this.salario*factor;
-    }
+    //Método abstracto
+    //Este método obliga a todas las clases hijas a sobreescribir este método
+    public abstract double getBonificacion();
 }

@@ -16,7 +16,7 @@ public class Gerente extends Funcionario{
 
     public double getBonificacion (){
         //la bonificación de gerente es = su mismo salario + la bonificación asignada a un funcionario
-        return super.getSalario() + super.getBonificacion();
+        return super.getSalario() + this.getSalario()*0.05;
     }
 
 

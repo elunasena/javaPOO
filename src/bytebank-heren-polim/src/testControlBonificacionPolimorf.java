@@ -1,6 +1,6 @@
 public class testControlBonificacionPolimorf {
     public static void main(String[] args) {
-        Funcionario diego = new Funcionario();
+        Funcionario diego = new Contador();
         diego.setSalario(2000);
         Gerente gerente = new Gerente();
         gerente.setSalario(10000);

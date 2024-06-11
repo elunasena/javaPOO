@@ -70,31 +70,25 @@ public class Cuenta {
         return total;
     }
 
-    public void depositar(double valor)
-    {
-        this.saldo += valor;
-    }
+    public void deposita(double valor) {
+        this.saldo = this.saldo + valor;
+    };
 
-    public boolean retirar(double valor) {
-        if (this.saldo <= valor) {
+    public boolean saca(double valor) {
+        if(this.saldo >= valor) {
             this.saldo -= valor;
             return true;
-        } else
-        {
+        } else {
             return false;
         }
     }
 
-    public boolean transferir(double valor, Cuenta cuenta)
-    {
-        if (this.saldo >= valor)
-        {
-            cuenta.depositar(valor);
-            this.saldo -= valor;
+    public boolean transfiere(double valor, Cuenta destino) {
+        if(this.saldo >= valor) {
+            this.saca(valor);
+            destino.deposita(valor);
             return true;
-        }
-        else
-        {
+        } else {
             return false;
         }
     }

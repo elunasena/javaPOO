@@ -1,4 +1,4 @@
-public class Gerente extends Funcionario{
+public class Gerente implements Autenticable{
 
     private String clave;
 
